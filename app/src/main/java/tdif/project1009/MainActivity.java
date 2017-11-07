@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             bundle.putString("id",etId.getText().toString());
             Intent intent = new Intent(MainActivity.this,ResultActivity.class);
             //intent.putExtra("id",etId.getText().toString());
+            //Add all function
             intent.putExtra("bundle",bundle);
             startActivity(intent);
         }
