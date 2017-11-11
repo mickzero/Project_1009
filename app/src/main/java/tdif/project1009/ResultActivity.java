@@ -23,12 +23,12 @@ public class ResultActivity extends AppCompatActivity {
         tvAge = (TextView) findViewById(R.id.tvAge);
         tvFres = (TextView) findViewById(R.id.tvFresult);
         Intent intent = getIntent();
+
         tvId.setText(intent.getStringExtra("id"));
         tvName.setText(intent.getStringExtra("name"));
         tvPass.setText(intent.getStringExtra("pass"));
         tvAge.setText(intent.getStringExtra("age"));
-        fres = intent.getFloatExtra("fres",0);
-        tvFres.setText(String.valueOf(fres));
+        tvFres.setText(intent.getStringExtra("fres"));
 
     }
 }

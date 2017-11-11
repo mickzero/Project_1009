@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             f2 = Float.parseFloat(etF2.getText().toString());
             fres = f1+f2;
 
-            intent.putExtra("fres",fres);
+            intent.putExtra("fres",""+fres);
 
             startActivity(intent);
         }
