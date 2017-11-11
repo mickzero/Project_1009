@@ -32,12 +32,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == btAdd){
-            Bundle bundle = new Bundle();
-            bundle.putString("id",etId.getText().toString());
             Intent intent = new Intent(MainActivity.this,ResultActivity.class);
-            //intent.putExtra("id",etId.getText().toString());
-            //Add all function
-            intent.putExtra("bundle",bundle);
+            intent.putExtra("pass",etPass.getText().toString());
+            intent.putExtra("name",etName.getText().toString());
+            intent.putExtra("id",etId.getText().toString());
+            intent.putExtra("age",etAge.getText().toString());
+
+            float f1,f2,fres;
+            f1 = Float.parseFloat(etF1.getText().toString());
+            f2 = Float.parseFloat(etF2.getText().toString());
+            fres = f1+f2;
+
+            intent.putExtra("fres",fres);
+
             startActivity(intent);
         }
     }
